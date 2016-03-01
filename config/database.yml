@@ -1,6 +1,6 @@
 production:
   url: <%= ENV['DATABASE_URL'] %>
-  
+
 development:
   adapter: postgresql
   database: nolan_anagram_development

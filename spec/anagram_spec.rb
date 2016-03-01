@@ -1,21 +1,21 @@
 require 'rspec'
-require_relative '../anagram.rb'
+require_relative '../app/models/word.rb'
 
-describe "#find_anagram" do
+describe "#find_anagrams" do
   let(:word) { "abc" }
 
   it "takes a string" do
     expect {
-      find_anagram(word)
+      Word.find_anagrams(word)
     }.not_to raise_error
   end
 
   it "returns an array" do
-    expect(find_anagram(word)).to be_a(Array)
+    expect(Word.find_anagrams(word)).to be_a(Array)
   end
 
   it "returns the correct results" do
-    expect(find_anagram(word)).to match_array(
+    expect(Word.find_anagrams(word)).to match_array(
       %w(abc acb bac bca cab cba)
     )
   end
