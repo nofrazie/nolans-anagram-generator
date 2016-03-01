@@ -1,15 +1,18 @@
+production:
+  url: <%= ENV['DATABASE_URL'] %>
+  
 development:
   adapter: postgresql
-  database:
+  database: nolan_anagram_development
   pool: 5
   host: localhost
-  username:
+  username: nolanfrazier
   password:
 
 test:
   adapter: postgresql
-  database:
+  database: nolan_anagram_test
   pool: 5
   host: localhost
-  username:
-  password: 
+  username: nolanfrazier
+  password:
