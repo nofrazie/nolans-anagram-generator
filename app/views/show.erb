@@ -1,0 +1,8 @@
+<h1 class="page-header text-center">Anagrams for <%= "(#{@word})" %></h1>
+<h3 class="text-center"><a href="/" class="btn btn-danger">Type in New Word</a></h3>
+
+<% @anagrams.each do |anagram| %>
+  <ul>
+    <li class="col-md-2 list-unstyled tex-center"><%= anagram %></li>
+  </ul>
+<% end %>
