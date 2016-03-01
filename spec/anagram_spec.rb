@@ -16,7 +16,7 @@ describe "#find_anagrams" do
 
   it "returns the correct results" do
     expect(Word.find_anagrams(word)).to match_array(
-      %w(abc acb bac bca cab cba)
+      %w(cab)
     )
   end
 end
