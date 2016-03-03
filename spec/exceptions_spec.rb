@@ -7,8 +7,4 @@ describe 'Our Anagrams App' do
     expect { valid_input("test") }.to raise_error
   end
 
-  it 'valid_input throws an exception when input does not have distinct letters' do
-    expect { valid_input("too") }.to raise_error
-  end
-
 end

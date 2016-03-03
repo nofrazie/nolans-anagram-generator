@@ -23,8 +23,4 @@ describe 'Our Anagrams App' do
     expect(last_response.body).to include("<p class='error'>")
   end
 
-  it 'should display an error if input is does not have distinct letters' do
-    post("/", { word: 'too' })
-    expect(last_response.body).to include("<p class='error'>")
-  end
 end
