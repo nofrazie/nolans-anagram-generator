@@ -34,7 +34,7 @@ describe 'Our Anagrams App' do
   #
   # it 'valid_input throws an exception when input does not have distinct letters' do
   #   expect { valid_input("too") }.to raise_error
-  # end 
+  # end
 
   it 'has letters of a word in alphabetical order' do
     word = Word.find_by_text("cat")
