@@ -17,3 +17,19 @@ get '/words/:id' do
   @word = Word.find(params[:id])
   erb :"/words/show"
 end
+
+get '/words/:id/edit' do
+  @word = Word.find(params[:id])
+  erb :"/words/edit"
+end
+
+put '/words/:id' do
+  @word = Word.find(params[:id])
+  @word.text = params([:text])
+  if @word.valid?
+    @word.save
+    redirect "/words/#{@word.id}"
+  else
+    erb :"/words/:id/edit"
+  end
+end
