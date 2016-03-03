@@ -1,0 +1,10 @@
+<form class="<%= words_form_class(@word) %>" id="<%= words_form_id(@word) %>" action="<%= words_form_action(@word) %>" method="<%= words_form_method(@word) %>">
+  <div class="form-group">
+    <label for="text">Text:</label>
+    <input type="text" name="text" class="form-control" value="<%= @word.text %>">
+  </div>
+
+  <div class="form-group">
+    <input type="submit" class="btn btn-danger">
+  </div>
+</form>
