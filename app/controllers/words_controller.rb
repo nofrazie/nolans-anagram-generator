@@ -25,7 +25,7 @@ end
 
 put '/words/:id' do
   @word = Word.find(params[:id])
-  @word.text = params([:text])
+  @word.text = params[:text]
   if @word.valid?
     @word.save
     redirect "/words/#{@word.id}"
